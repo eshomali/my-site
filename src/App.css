@@ -221,6 +221,10 @@ html {
     background: linear-gradient(#184b53, white);
 }
 
+.AccordionParent {
+  padding-top:189px;
+}
+
 
 
 .card-text {
@@ -285,7 +289,7 @@ html {
   opacity: 0.85;
   top: 250px;
   left: 420px;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .card:hover {
@@ -305,6 +309,17 @@ html {
 }
 
 
+
+#thisDate {
+  z-index: 4;
+  font-size: 155%;
+  font-weight: bold;
+  position: relative;
+  padding: 20px 20px;
+  right: -55%;
+  top: 16px;
+  color: hsl(212, 94%, 36%);
+}
 
 #custom-header4 {
   z-index: 4;
