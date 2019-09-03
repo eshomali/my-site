@@ -221,11 +221,29 @@ html {
     background: linear-gradient(#184b53, white);
 }
 
-.AccordionParent {
-  padding-top:189px;
+.edu_header {
+  /*font-size: 24px; */
+}
+.edu_body {
+  text-align: center;
 }
 
 
+
+.AccordionParent {
+  padding-top: 0px;
+}
+
+.card-header {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cards {
+  /* */
+  padding-top:172px;
+}
 
 .card-text {
   font-size: 50px;
@@ -235,46 +253,17 @@ html {
   font-family: Georgia, serif;
 }
 
-
-.myCard4 .card {
-  padding: 10px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 300px;
-  height: 250px;
-  position: relative;
-  background-color: green;
-  opacity: 0.85;
-  top: -290px;
-  left: 753px;
-  cursor: pointer;
-}
-
-.myCard3 .card {
-  padding: 10px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 300px;
-  height: 250px;
-  position: relative;
-  background-color: yellow;
-  opacity: 0.85;
-  top: -309px;
-  left: 753px;
-  cursor: pointer;
-}
-
 .myCard2 .card {
   padding: 10px 10px 10px 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 300px;
-  height: 250px;
+  height: 300px;
   position: relative;
-  background-color: red;
+  background-color: yellow;
   opacity: 0.85;
-  top: 250px;
-  left: 420px;
+  top: -385px;
+  left: 684px;
   cursor: pointer;
 }
 
@@ -283,13 +272,13 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 300px;
-  height: 250px;
+  height: 300px;
   position: relative;
   background-color: blue;
   opacity: 0.85;
-  top: 250px;
+  top: 23px;
   left: 420px;
-  /*cursor: pointer;*/
+  cursor: pointer;
 }
 
 .card:hover {

@@ -41,26 +41,119 @@ class Home extends Component {
             </>
         )
     }
-    thisModal() {
+
+    myHomepage() {
+        const wd = "21rem";
+        const ht = "24rem";
         const [show, setShow] = useState(false);
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+        
         return (
             <>
-            <Button variant="secondary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
+            <div className = "cards">
+                <div className="myCard1" onClick={handleShow}>
+                    <Card bg="success" text="black" style={{ width: wd, height: ht }}>
+                        <Card.Body>
+                            <Card.Text>
+                                Resume&nbsp;
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <br />
+                <div className="myCard2">
+                    <Card bg="success" text="black" style={{ width: wd, height: ht }}>
+                        <Card.Body>
+                            <Card.Text>
+                                <span className="email" href="mailto:eshomali@gmail.com">&nbsp;email</span>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+            </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title><strong>Resume</strong></Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>
+                    <>
+                    <div class="AccordionParent">
+                        <Accordion defaultActiveKey="1">
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        <div class="edu_header">
+                                            Education
+                                        </div>
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>
+                                        <div class="edu_body">
+                                            <h3>B.S.E. Computer Engineering</h3>
+                                            <em><h4><a href="http://www.oakland.edu" target="_blank">Oakland University</a></h4></em>
+                                        </div>
+                                        <li>Minor in Computer Science</li>
+                                        <li>Vice President, Engineering Society of Detroit</li>
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        Experiences
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>
+                                        <p>Software Engineer&nbsp;&mdash;&nbsp;Sept 2018 - Current<br/>
+                                            <em>Asset Health</em>
+                                        </p>
+                                        <p>Computer Science Intern&nbsp;&mdash;&nbsp;Aug 2016 - Jul 2018<br />
+                                            <em>Complete Data Products</em>
+                                        </p>
+                                        <p>Teaching Assistant&nbsp;&mdash;&nbsp;Sept 2017 - Dec 2017<br />
+                                            <em>Oakland University</em>
+                                        </p>
+                                        <p>Electronics Technician&nbsp;&mdash;&nbsp;Jun 2013 - Aug 2016<br />
+                                            <em>Boost Mobile</em>
+                                        </p>
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        Skills
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>
+                                        C, PHP, HTML, CSS, React JSX, Bootstrap
+                                    </Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                                <Card.Header>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        Projects
+                                    </Accordion.Toggle>
+                                </Card.Header>
+                                <Accordion.Collapse eventKey="0">
+                                    <Card.Body>Autonomous Vehicle</Card.Body>
+                                </Accordion.Collapse>
+                            </Card>
+                        </Accordion>
+                    </div>
+                    </>
+                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Exit
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
-                        Save Changes
+                        Download
                     </Button>
                 </Modal.Footer>
             </Modal> 
@@ -68,53 +161,11 @@ class Home extends Component {
         )
     }
 
-    thisCards() {
-        return (
-            <>
-            <div className="myCard1">
-                <Card bg="success" text="black" style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Text>
-                            Projects
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-            <br />
-            <div className="myCard2">
-                <Card bg="success" text="black" style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Text>
-                            RESUME
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className="myCard3">
-                <Card bg="success" text="black" style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Text>
-                            <span className="email" href="mailto:eshomali@gmail.com">EMAIL</span>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-            <div className="myCard4">
-                <Card bg="success" text="black" style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Text>
-                            GITHUB
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-            </>
-        )
-    }
-
     scrollAHV() {
         window.scroll(
-            { top: window.innerHeight, left: 0, behavior: 'smooth' }
+            {   top: window.innerHeight, 
+                left: 0, 
+                behavior: 'smooth'  }
         );
     }
     
@@ -129,10 +180,7 @@ class Home extends Component {
                 
                 <br/>
                 <div className="parallax-one">
-                    <this.Accordion/>
-                    <br/>
-                    <this.thisModal/>
-                    <this.thisCards/>
+                    <this.myHomepage/>
                 </div>
             </div>
       
