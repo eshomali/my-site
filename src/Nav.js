@@ -9,7 +9,7 @@ class Nav extends Component {
                 <span id="custom-header">Essa Shomali&nbsp;</span>
                 <span id="thisDate">{thisDate}</span>
 
-                <br/><br/>
+                <br/>
                 <hr className="line-text" data-content="<hr />" />
             </div>
         )

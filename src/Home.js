@@ -43,8 +43,8 @@ class Home extends Component {
     }
 
     myHomepage() {
-        const wd = "21rem";
-        const ht = "24rem";
+        const wd = "16rem";
+        const ht = "16rem";
         const [show, setShow] = useState(false);
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
@@ -52,21 +52,38 @@ class Home extends Component {
         return (
             <>
             <div className = "cards">
-                <div className="myCard1" onClick={handleShow}>
-                    <Card bg="success" text="black" style={{ width: wd, height: ht }}>
-                        <Card.Body>
+                <div className="myCard1">
+                    <Card bg="warning" style={{ width: wd, height: ht }}>
+                        <Card.Body onClick={handleShow}>
                             <Card.Text>
-                                Resume&nbsp;
+                                Resume
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
-                <br />
                 <div className="myCard2">
-                    <Card bg="success" text="black" style={{ width: wd, height: ht }}>
+                    <Card bg="danger" style={{ width: wd, height: ht }}>
                         <Card.Body>
                             <Card.Text>
-                                <span className="email" href="mailto:eshomali@gmail.com">&nbsp;email</span>
+                                <a class="links" href="mailto:eshomali@gmail.com">Email</a>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <div className="myCard3">
+                    <Card bg="primary" style={{ width: wd, height: ht }}>
+                        <Card.Body>
+                            <Card.Text>
+                                <a class="links" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <div className="myCard4">
+                    <Card bg="success" style={{ width: wd, height: ht }}>
+                        <Card.Body>
+                            <Card.Text>
+                                <a class="links" href="https://www.github.com/eshomali" target="_blank">GitHub</a>
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -74,7 +91,7 @@ class Home extends Component {
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title><strong>Resume</strong></Modal.Title>
+                    <Modal.Title><strong><h3>Resume</h3></strong></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <>
@@ -84,15 +101,15 @@ class Home extends Component {
                                 <Card.Header>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
                                         <div class="edu_header">
-                                            Education
+                                            <h5><b>Education</b></h5>
                                         </div>
                                     </Accordion.Toggle>
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
                                         <div class="edu_body">
-                                            <h3>B.S.E. Computer Engineering</h3>
-                                            <em><h4><a href="http://www.oakland.edu" target="_blank">Oakland University</a></h4></em>
+                                            <h6><b>&nbsp;B.S.E. Computer Engineering</b></h6>
+                                            <em><h6><a href="http://www.oakland.edu" target="_blank">&nbsp;Oakland University</a></h6></em>
                                         </div>
                                         <li>Minor in Computer Science</li>
                                         <li>Vice President, Engineering Society of Detroit</li>
@@ -107,18 +124,43 @@ class Home extends Component {
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
-                                        <p>Software Engineer&nbsp;&mdash;&nbsp;Sept 2018 - Current<br/>
-                                            <em>Asset Health</em>
-                                        </p>
-                                        <p>Computer Science Intern&nbsp;&mdash;&nbsp;Aug 2016 - Jul 2018<br />
-                                            <em>Complete Data Products</em>
-                                        </p>
-                                        <p>Teaching Assistant&nbsp;&mdash;&nbsp;Sept 2017 - Dec 2017<br />
-                                            <em>Oakland University</em>
-                                        </p>
-                                        <p>Electronics Technician&nbsp;&mdash;&nbsp;Jun 2013 - Aug 2016<br />
-                                            <em>Boost Mobile</em>
-                                        </p>
+                                        <table id="t1">
+                                            <tr>
+                                                <td>Software Engineer&nbsp;</td>
+                                                <td>&nbsp;&mdash;&nbsp;</td>
+                                                <td>&nbsp;Sept 2018 - Current</td>
+                                            </tr>
+                                            <tr>
+                                                <td><em>Asset Health</em></td>
+                                            </tr>
+                                            <br/>
+                                            <tr>
+                                                <td>Computer Science Intern&nbsp;</td>
+                                                <td>&nbsp;&mdash;&nbsp;</td>
+                                                <td>&nbsp;Aug 2016 - Jul 2018</td>
+                                            </tr>
+                                            <tr>
+                                                <td><em>Complete Data Products</em></td>
+                                            </tr>
+                                            <br/>
+                                            <tr>
+                                                <td>Teaching Assistant&nbsp;</td>
+                                                <td>&nbsp;&mdash;&nbsp;</td>
+                                                <td>&nbsp;Sept 2017 - Dec 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><em>Oakland University</em></td>
+                                            </tr>
+                                            <br/>
+                                            <tr>
+                                                <td>Electronics Technician&nbsp;</td>
+                                                <td>&nbsp;&mdash;&nbsp;</td>
+                                                <td>&nbsp;Jun 2013 - Aug 2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td><em>Boost Mobile</em></td>
+                                            </tr>
+                                        </table>
                                     </Card.Body>
                                 </Accordion.Collapse>
                             </Card>

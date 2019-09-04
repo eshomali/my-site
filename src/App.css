@@ -221,13 +221,28 @@ html {
     background: linear-gradient(#184b53, white);
 }
 
+/***************************************************************/
+
+table #t1 {
+  width:100%;
+}
+
 .edu_header {
   /*font-size: 24px; */
 }
 .edu_body {
-  text-align: center;
+  text-align: left;
 }
 
+
+
+.links:hover {
+  color: white;
+  text-decoration: none;
+}
+.links {
+  color: white;
+}
 
 
 .AccordionParent {
@@ -241,8 +256,9 @@ html {
 }
 
 .cards {
-  /* */
-  padding-top:172px;
+  /*  */
+  padding-left: 122px;
+  position: sticky;
 }
 
 .card-text {
@@ -251,6 +267,34 @@ html {
   color: white;
   padding-top: 37px;
   font-family: Georgia, serif;
+}
+
+.myCard4 .card {
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: blue;
+  opacity: 0.85;
+  top: -209px;
+  left: 512px;
+  cursor: pointer;
+}
+
+.myCard3 .card {
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: yellow;
+  opacity: 0.85;
+  top: 48px;
+  left: 193px;
+  cursor: pointer;
 }
 
 .myCard2 .card {
@@ -262,8 +306,8 @@ html {
   position: relative;
   background-color: yellow;
   opacity: 0.85;
-  top: -385px;
-  left: 684px;
+  top: 0px;
+  left: 512px;
   cursor: pointer;
 }
 
@@ -276,8 +320,8 @@ html {
   position: relative;
   background-color: blue;
   opacity: 0.85;
-  top: 23px;
-  left: 420px;
+  top: 256px;
+  left: 193px;
   cursor: pointer;
 }
 
@@ -305,7 +349,7 @@ html {
   font-weight: bold;
   position: relative;
   padding: 20px 20px;
-  right: -55%;
+  right: -50%;
   top: 16px;
   color: hsl(212, 94%, 36%);
 }
