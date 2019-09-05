@@ -1,17 +1,21 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import profileImage from './img/cat.jpg';
 import profileImage2 from './img/cat.jpg';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
+import Badge from 'react-bootstrap/Badge';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+
 import Projects from './Projects';
+import { tsImportEqualsDeclaration, thisExpression } from '@babel/types';
 //import { Link } from 'react-router';
 //import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Home extends Component {
 
-    Accordion(){
+    Accordion(){ //Example of an accordion-card structure
         return (
             <>
             <div class="AccordionParent">
@@ -42,13 +46,28 @@ class Home extends Component {
         )
     }
 
+    networkRequest() {
+        return new Promise(resolve => setTimeout(resolve, 2000));
+    }
+
     myHomepage() {
         const wd = "16rem";
         const ht = "16rem";
         const [show, setShow] = useState(false);
+        const [isLoading, setLoading] = useState(false);
+
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
-        
+        const handleClick = () => setLoading(true);
+
+        useEffect(() => {
+            if (isLoading === true) {
+                this.networkRequest().then(() => { setLoading(false); });
+            }
+        }, [isLoading]);
+
+        //const resume = <Badge variant="primary">Resume</Badge>;
+
         return (
             <>
             <div className = "cards">
@@ -56,7 +75,7 @@ class Home extends Component {
                     <Card bg="warning" style={{ width: wd, height: ht }}>
                         <Card.Body onClick={handleShow}>
                             <Card.Text>
-                                Resume
+                                resume
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -65,6 +84,7 @@ class Home extends Component {
                     <Card bg="danger" style={{ width: wd, height: ht }}>
                         <Card.Body>
                             <Card.Text>
+                                <h3>shoot me an</h3>
                                 <a class="links" href="mailto:eshomali@gmail.com">Email</a>
                             </Card.Text>
                         </Card.Body>
@@ -74,6 +94,7 @@ class Home extends Component {
                     <Card bg="primary" style={{ width: wd, height: ht }}>
                         <Card.Body>
                             <Card.Text>
+                                <h3>connect wth me</h3>
                                 <a class="links" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
                             </Card.Text>
                         </Card.Body>
@@ -83,12 +104,14 @@ class Home extends Component {
                     <Card bg="success" style={{ width: wd, height: ht }}>
                         <Card.Body>
                             <Card.Text>
+                                <h3>checkout my</h3>
                                 <a class="links" href="https://www.github.com/eshomali" target="_blank">GitHub</a>
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
             </div>
+            
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title><strong><h3>Resume</h3></strong></Modal.Title>
@@ -194,8 +217,9 @@ class Home extends Component {
                     <Button variant="secondary" onClick={handleClose}>
                         Exit
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Download
+                    <Button variant="primary" disabled={isLoading}
+                            onClick={!isLoading ? handleClick : null}>
+                        {isLoading ? 'Downloading....' : ' Download PDF '}
                     </Button>
                 </Modal.Footer>
             </Modal> 
@@ -210,6 +234,12 @@ class Home extends Component {
                 behavior: 'smooth'  }
         );
     }
+
+    constructor(props) {
+        super(props);
+        this.networkRequest = this.networkRequest.bind(this);
+        this.myHomepage = this.myHomepage.bind(this);
+    }
     
     render() {
         
@@ -219,11 +249,7 @@ class Home extends Component {
                 <div className="main-text">
                     <span id="main-header"></span>
                 </div>
-                
-                <br/>
-                <div className="parallax-one">
-                    <this.myHomepage/>
-                </div>
+                <this.myHomepage/>
             </div>
       
         )

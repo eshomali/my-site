@@ -9,6 +9,11 @@ import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import Projects from './Projects';
 
 export default class App extends Component {
+    
+    constructor(props) {
+        super(props);
+    }
+    
     render() {
         return (
             <div>

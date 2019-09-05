@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
 class Nav extends Component {
     render() {
