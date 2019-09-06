@@ -92,7 +92,7 @@ html {
   color: hsl(212, 94%, 36%);
   text-align: center;
   height: 1.6em;
-  position: sticky;
+  position:-webkit-sticky; position:sticky; top:0;
 }
 
 .line-text::before {
@@ -132,7 +132,7 @@ html {
 
 
 .parallax-one {
-  /*background-image: url("./img/cat.jpg");*/
+  background-image: url("./img/cat.jpg");
   min-height: 1100px;
   background-attachment: fixed;
   background-position: center;
@@ -223,6 +223,11 @@ html {
 
 /***************************************************************/
 
+#linkedin {
+  font-size: 46px;
+}
+
+
 table #t1 {
   width:100%;
 }
@@ -233,7 +238,6 @@ table #t1 {
 .edu_body {
   text-align: left;
 }
-
 
 
 .links:hover {
@@ -257,7 +261,8 @@ table #t1 {
 
 .cards {
   /*  */
-  padding-left: 122px;
+  padding-left: 0px;
+  margin-left: -100px;
   position: sticky;
 }
 
@@ -338,19 +343,27 @@ table #t1 {
 }
 
 .topSection {
-  position: sticky;
+  /*position: sticky;*/
 }
 
-
-
+#aware {
+  z-index: 4;
+  font-size: 100%;
+  font-weight: bold;
+  position: relative;
+  padding: 1px 1px;
+  right: -34%;
+  top: -8px;
+  color: hsl(212, 94%, 36%);
+}
 #thisDate {
   z-index: 4;
   font-size: 155%;
   font-weight: bold;
   position: relative;
-  padding: 20px 20px;
-  right: -50%;
-  top: 16px;
+  padding: 1px 1px;
+  right: -25%;
+  top: 25px;
   color: hsl(212, 94%, 36%);
 }
 

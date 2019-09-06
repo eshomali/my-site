@@ -9,6 +9,7 @@ class Nav extends Component {
         return (
             <div className="topSection">
                 <span id="custom-header">Essa Shomali&nbsp;</span>
+                <span id="aware">just so you're aware</span>
                 <span id="thisDate">{thisDate}</span>
 
                 <br/>

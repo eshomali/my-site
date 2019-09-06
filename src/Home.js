@@ -15,7 +15,7 @@ import { tsImportEqualsDeclaration, thisExpression } from '@babel/types';
 
 class Home extends Component {
 
-    Accordion(){ //Example of an accordion-card structure
+    Accordion() { //Example of an accordion-card structure
         return (
             <>
             <div class="AccordionParent">
@@ -57,14 +57,18 @@ class Home extends Component {
         const [isLoading, setLoading] = useState(false);
 
         const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
+        const handleShow  = () => setShow(true);
         const handleClick = () => setLoading(true);
 
-        useEffect(() => {
+        const sendEmail = () => window.location = 'mailto:eshomali@gmail.com';
+        const linkedin  = () => window.open('https://www.linkedin.com', '_blank');
+        const github    = () => window.open('https://www.github.com/eshomali', '_blank');
+
+        useEffect( () => {
             if (isLoading === true) {
-                this.networkRequest().then(() => { setLoading(false); });
+                this.networkRequest().then( () => {setLoading(false);} );
             }
-        }, [isLoading]);
+        }, [isLoading] );
 
         //const resume = <Badge variant="primary">Resume</Badge>;
 
@@ -75,37 +79,38 @@ class Home extends Component {
                     <Card bg="warning" style={{ width: wd, height: ht }}>
                         <Card.Body onClick={handleShow}>
                             <Card.Text>
-                                resume
+                                <h3>my good ol'</h3>
+                                Resume
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
                 <div className="myCard2">
                     <Card bg="danger" style={{ width: wd, height: ht }}>
-                        <Card.Body>
+                        <Card.Body onClick={sendEmail}>
                             <Card.Text>
-                                <h3>shoot me an</h3>
-                                <a class="links" href="mailto:eshomali@gmail.com">Email</a>
+                                <h3>send me an</h3>
+                                    Email
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
                 <div className="myCard3">
                     <Card bg="primary" style={{ width: wd, height: ht }}>
-                        <Card.Body>
+                        <Card.Body onClick={linkedin}>
                             <Card.Text>
                                 <h3>connect wth me</h3>
-                                <a class="links" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                                <div id="linkedin">LinkedIn</div>
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
                 <div className="myCard4">
                     <Card bg="success" style={{ width: wd, height: ht }}>
-                        <Card.Body>
+                        <Card.Body onClick={github}>
                             <Card.Text>
                                 <h3>checkout my</h3>
-                                <a class="links" href="https://www.github.com/eshomali" target="_blank">GitHub</a>
+                                GitHub
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -142,7 +147,7 @@ class Home extends Component {
                             <Card>
                                 <Card.Header>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                                        Experiences
+                                        <h5><b>Experiences</b></h5>
                                     </Accordion.Toggle>
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
@@ -190,7 +195,7 @@ class Home extends Component {
                             <Card>
                                 <Card.Header>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                                        Skills
+                                        <h5><b>Skill Set</b></h5>
                                     </Accordion.Toggle>
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
@@ -202,7 +207,7 @@ class Home extends Component {
                             <Card>
                                 <Card.Header>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                                        Projects
+                                        <h5><b>Projects</b></h5>
                                     </Accordion.Toggle>
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
@@ -249,7 +254,8 @@ class Home extends Component {
                 <div className="main-text">
                     <span id="main-header"></span>
                 </div>
-                <this.myHomepage/>
+                <this.myHomepage />
+                <div class="parallax-one"></div>
             </div>
       
         )
