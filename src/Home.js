@@ -79,7 +79,7 @@ class Home extends Component {
                     <Card bg="warning" style={{ width: wd, height: ht }}>
                         <Card.Body onClick={handleShow}>
                             <Card.Text>
-                                <h3>my good ol'</h3>
+                                <h3>the good ol'</h3>
                                 Resume
                             </Card.Text>
                         </Card.Body>
@@ -99,7 +99,7 @@ class Home extends Component {
                     <Card bg="primary" style={{ width: wd, height: ht }}>
                         <Card.Body onClick={linkedin}>
                             <Card.Text>
-                                <h3>connect wth me</h3>
+                                <h3>connect on</h3>
                                 <div id="linkedin">LinkedIn</div>
                             </Card.Text>
                         </Card.Body>

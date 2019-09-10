@@ -223,6 +223,14 @@ html {
 
 /***************************************************************/
 
+.construction {
+  
+  margin-left: 181px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+
 #linkedin {
   font-size: 46px;
 }
@@ -352,7 +360,7 @@ table #t1 {
   font-weight: bold;
   position: relative;
   padding: 1px 1px;
-  right: -34%;
+  right: -10%;
   top: -8px;
   color: hsl(212, 94%, 36%);
 }
@@ -362,7 +370,7 @@ table #t1 {
   font-weight: bold;
   position: relative;
   padding: 1px 1px;
-  right: -25%;
+  right: -1%;
   top: 25px;
   color: hsl(212, 94%, 36%);
 }
