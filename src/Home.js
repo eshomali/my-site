@@ -61,7 +61,7 @@ class Home extends Component {
         const handleClick = () => setLoading(true);
 
         const sendEmail = () => window.location = 'mailto:eshomali@gmail.com';
-        const linkedin  = () => window.open('https://www.linkedin.com', '_blank');
+        const linkedin  = () => window.open('https://www.linkedin.com/in/eshomali', '_blank');
         const github    = () => window.open('https://www.github.com/eshomali', '_blank');
 
         useEffect( () => {
