@@ -136,10 +136,13 @@ class Home extends Component {
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
                                         <div class="edu_body">
-                                            <h6><b>&nbsp;B.S.E. Computer Engineering</b></h6>
-                                            <em><h6><a href="http://www.oakland.edu" target="_blank">&nbsp;Oakland University</a></h6></em>
+                                            <h6>
+                                                <b>&nbsp;B.S.E. Computer Engineering,
+                                                    <em><a href="http://www.oakland.edu" target="_blank">&nbsp;Oakland University</a></em>
+                                                </b>
+                                            </h6>
                                         </div>
-                                        <li>Minor in Computer Science</li>
+                                        <li>Concentration in Computer Science</li>
                                         <li>Vice President, Engineering Society of Detroit</li>
                                     </Card.Body>
                                 </Accordion.Collapse>
@@ -200,7 +203,7 @@ class Home extends Component {
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
-                                        C, PHP, HTML, CSS, React JSX, Bootstrap
+                                        C, Java, PHP, JavaScript, HTML/CSS, React JSX, Bootstrap
                                     </Card.Body>
                                 </Accordion.Collapse>
                             </Card>
@@ -211,7 +214,12 @@ class Home extends Component {
                                     </Accordion.Toggle>
                                 </Card.Header>
                                 <Accordion.Collapse eventKey="0">
-                                    <Card.Body>Autonomous Vehicle</Card.Body>
+                                    <Card.Body>
+                                        Autonomous Vehicle (C/C++, Arduino)<br/>
+                                        Biometric Face Recognition (C, MATLAB)<br/>
+                                        Android Application (Java)<br/>
+                                        Image Classifier (Python, Tensorflow)<br/>
+                                    </Card.Body>
                                 </Accordion.Collapse>
                             </Card>
                         </Accordion>

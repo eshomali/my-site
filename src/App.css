@@ -225,7 +225,7 @@ html {
 
 .construction {
   
-  margin-left: 181px;
+  margin-left: 3%;
   font-weight: bold;
   font-size: 10px;
 }
@@ -268,9 +268,8 @@ table #t1 {
 }
 
 .cards {
-  /*  */
-  padding-left: 0px;
-  margin-left: -100px;
+  /* padding-left: 0px; */
+  margin-left: -8px;
   position: sticky;
 }
 
@@ -353,25 +352,29 @@ table #t1 {
 .topSection {
   /*position: sticky;*/
 }
-
+/*
 #aware {
   z-index: 4;
   font-size: 100%;
   font-weight: bold;
-  position: relative;
+  
   padding: 1px 1px;
-  right: -10%;
-  top: -8px;
+  position: sticky;
+  right: 53%;
+  top: 5%;
+
   color: hsl(212, 94%, 36%);
-}
+} */
 #thisDate {
   z-index: 4;
   font-size: 155%;
   font-weight: bold;
-  position: relative;
-  padding: 1px 1px;
-  right: -1%;
-  top: 25px;
+  margin-left: 5%;
+  /*padding: 1px 1px;
+  position: sticky;
+  right: 50%;
+  top: 10%;*/
+
   color: hsl(212, 94%, 36%);
 }
 
